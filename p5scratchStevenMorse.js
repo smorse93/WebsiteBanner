@@ -3,9 +3,9 @@ let dotSize = 6; // Adjust this value to change the size of the dots
 let thresholdValue = 20; // Adjust this value to change the brightness threshold
 let dots = []; // Array to store dot objects
 let mass = 1; // Mass of the dots
-let springConstant = 0.03; // Adjust this value to control the springiness (higher value for faster movement)
+let springConstant = 0.02; // Adjust this value to control the springiness (higher value for faster movement)
 let dampingCoefficient = 0.13; // Adjust this value to control damping (higher value for quicker damping)
-let mouseInteractionRadius = 20; // Radius for mouse interaction
+let mouseInteractionRadius = 30; // Radius for mouse interaction
 let tintFactor = 0; // Initial tint factor
 
 function preload() {
@@ -17,7 +17,7 @@ function setup() {
   img.loadPixels(); // Load pixel data from the image
 
   // Initialize dots with a reduced number by increasing the skip value
-  let skip = 3; // Increase this value to reduce the number of dots
+  let skip = 2.5; // Increase this value to reduce the number of dots
   for (let x = 0; x < img.width; x += skip) {
     for (let y = 0; y < img.height; y += skip) {
       // Get the color of the pixel at (x, y)
@@ -120,7 +120,7 @@ class Dot {
 
   display() {
     // Interpolate the dot's color based on its x-coordinate and tintFactor
-    let dotColor = lerpColor(color(0, this.tintFactor * 255, 0), color(255), this.tintFactor);
+    let dotColor = lerpColor(color(0, this.tintFactor * 0 , 0), color(170), this.tintFactor);
     fill(dotColor);
     noStroke(); // No outline
     ellipse(this.x, this.y, dotSize, dotSize); // Draw a dot
