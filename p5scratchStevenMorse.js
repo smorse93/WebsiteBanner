@@ -3,8 +3,8 @@ let dotSize = 6; // Adjust this value to change the size of the dots
 let thresholdValue = 20; // Adjust this value to change the brightness threshold
 let dots = []; // Array to store dot objects
 let mass = 1; // Mass of the dots
-let springConstant = 0.02; // Adjust this value to control the springiness (higher value for faster movement)
-let dampingCoefficient = 0.13; // Adjust this value to control damping (higher value for quicker damping)
+let springConstant = 0.08; // Adjust this value to control the springiness (higher value for faster movement)
+let dampingCoefficient = 0.25; // Adjust this value to control damping (higher value for quicker damping)
 let mouseInteractionRadius = 30; // Radius for mouse interaction
 let tintFactor = 0; // Initial tint factor
 
